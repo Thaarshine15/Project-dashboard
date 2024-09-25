@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+*{
+    margin:0;
+    padding:0;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    background:white;  
+    display: flex; 
+}
+.container{
+    display: flex;
+    position:sticky;
+    overflow: hidden;
+    color: black;
+    transition : all 0.5s linear;
+}
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background:rgb(137, 79, 169);
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+  }
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+a{
+    position:relative;
+    color:black;
+    font-size: 14px;
+    display: table;
+    width:250px;
+    padding:10px;
+  }
+nav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+  }
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+  }
+a:hover{
+    background: rgb(183, 147, 202);
+    color:black;
+}
+.logout{
+    position: absolute;
+    bottom: 10px;;
+}
+.search{
+  float:right;
+  margin:20px;
+  position: relative;
+  padding-bottom: 20px;
+  width:80%;
+}
+.header-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background: #fff;
+  color:black;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+.search input[type=text]{
+  width:500px;
+  height:50px;
+  border-radius:25px;
+  border: none;
+  font-size:large;
+  text-align: center;
+  background-color:lightgrey;
+}
+.search button{
+  background-color: #0074D9;
+  color: #f2f2f2;
+  float: right;
+  padding: 5px 10px;
+  margin-right: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+.card-container{
+  background:lightgrey;
+  padding: 2rem;
+  border-radius: 10px;
+  align-items: center;
+}
+.card-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+.main-title{
+  color:rgba(113,99,186,255);
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.payment-card{
+  background: rgb(229,223,223);
+  border-radius:10px;
+  padding:1.2rem;
+  width:280px;
+  height:150px;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  transition:all 0.5s ease-in-out;
+}
+.payment-card:hover{
+  transform:(-5px);
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.amount{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  font-size: 16px;
+  font-weight:200;
+}
+.amount-value{
+font-size:24px;
+font-family: 'Courier New', Courier, monospace;
+font-weight: 600;
+}
+.icon{
+  color: #fff;
+  padding: 1rem;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50%;
+  font-size:1.5rem;
+  background: red;
+}
+.light-red{
+  background: rgb(251,233,233);
+}
+.light-purple{
+  background: rgb(254,226,254);
+}
+.light-green{
+  background: rgb(235,254,235);
+}
+.light-blue{
+  background: rgb(236,236,254);
+}
+.dark-purple{
+  background: purple;
+}
+.dark-green{
+  background: green;
+}
+.dark-blue{
+  background: blue;
+}
+.dark-red{
+  background: red;
+}
+.content {
+  margin-left: 260px; /* Adjust this to match the width of the sidebar */
+  padding: 20px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.task label {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+task-list {
+  margin: 20px;
+  padding: 10px;border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow:5px 5px lightblue;
+  }
+  #taskStatus{
+  width:16%;
+  border:2px solid Black;
+}
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    }
+    .row {
+    margin: 0 -5px;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    @media screen and (max-width:
+    600px) {
+    .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    }
+    }
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: LightBlue;
+    border:2px solid Blue;
+    }

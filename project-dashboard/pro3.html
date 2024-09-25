@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Project Management</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; padding: 
+0;">
+ </header>
+ <section class="container" style="max-width: 800px; margin: 20px auto; padding: 20px; 
+background-color: #fff; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+ <h2 ><center> Project Information</center></h2>
+ <div class="project-details" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+ <div class="project-detail" style="flex-basis: 45%;">
+ <h3>Project Name:</h3>
+ <p>CROP PRODUCTION AND MANAGEMENT</p>
+ </div>
+ <div class="project-detail" style="flex-basis: 45%;">
+ <h3>Status:</h3>
+ <p>Completed</p>
+ </div>
+ <div class="project-detail" style="flex-basis: 45%;">
+ <h3>Date:</h3>
+ <p>January 22, 2022</p>
+ </div>
+ <div class="project-detail" style="flex-basis: 45%;">
+ <h3>Project Progress:</h3>
+ <div class="progress-chart" style="width: 100%; background-color: #f0f0f0; height: 
+20px; border-radius: 5px; margin-top: 5px; position: relative;">
+ <div class="progress-bar" style="background-color: #4caf50; height: 100%; 
+border-radius: 5px; width: 100%;"></div>
+ </div>
+ </div>
+ </div>
+ <h2>Task Status</h2>
+ <div class="pie-chart"></div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ <body>
+ <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<script>
+ var xValues = ["completed", "pending actions", "requests", "on track", "delayed"];
+ var yValues = [100, 0, 0, 0, 0];
+ var barColors = [
+  "#1e7145",
+ "#b91d47",
+ "#2b5797",
+ "#e8c3b9",
+ "#00aba9"
+ ];
+ new Chart("myChart", {
+ type: "pie",
+ data: {
+ labels: xValues,
+ datasets: [{
+ backgroundColor: barColors,
+ data: yValues
+ }]
+ },
+ options: {
+ title: {
+ display: true,
+ text: "project-status"
+ }
+ }
+ });
+ </script>
+</body>
+ <h2>Project Timeline</h2>
+ <span class="timeline-date" style="font-weight: bold;">january 22, 2022</span>
+ <p>Project Presentation</p>
+ <span class="timeline-date" style="font-weight: bold;">October 15, 2023</span>
+ <p>Inter and zonal level Selection</p>
+ <span class="timeline-date" style="font-weight: bold;">October 30, 2023</span>
+ <p>Finale runner</p>
+ </section>
+ <script>
+ const taskStatusData = {
+ labels: ['Pending', 'In Progress', 'Completed'],
+ datasets: [{
+ data: [0, 0, 100],
+ backgroundColor: ['#FF9A8B', '#FFEB8E', '#B0E57C'],
+ }],
+ };
+ const taskStatusChartElement = document.getElementById('taskStatusChart');
+ const taskStatusChart = new Chart(taskStatusChartElement, {
+ type: 'doughnut',
+ data: taskStatusData,
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ },
+ });
+ </script>
+</body>
+</html>
